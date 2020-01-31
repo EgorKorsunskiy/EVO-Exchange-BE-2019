@@ -1,19 +1,4 @@
-*{  padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
 
-body {
-    margin: 0;
-    padding: 0;
-    background-color:#E5E5E5;
-    font-family: 'Roboto', sans-serif;
-}
-ol,ul ,li{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
 .wrapper {
     width: 100%;
     max-width: 1250px;
@@ -129,7 +114,7 @@ ol,ul ,li{
 .products-list-item__title {
     font-size: 16px;
     line-height: 19px;
-    padding: 7px 35px;
+    padding: 10px 35px;
     max-height: 62px;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -138,20 +123,29 @@ ol,ul ,li{
 
 
 .products-list-item__location {
+    position: relative;
     display: block;
     color: #DADADA;
     font-size: 14px;
     margin-top: auto;
     line-height: 24px;
     transition: all 0.2s;
+    max-width: max-content;
+    margin: 0 auto;
 }
 .products-list-item__location:active {
     color: #00C0FF;
 }
-.products-list-item__location:hover {
+.products-list-item__location:hover,
+.products-list-item__location:hover::before
+ {
     color:#0094FF
+    
 }
-
+.products-list-item__location.icon-Facebook-Places:before {
+    position: absolute;
+    left: -20px;
+}
 .products-list-item__watch {
     color: #FFFFFF;
     display: inline-block;
@@ -184,31 +178,27 @@ ol,ul ,li{
     transition: all 0.2s;
 }
 .product-like-this::before {
-    content: '';
     position: absolute;
     height: 28px;
     width: 28px;
     left: 50%;
     bottom: 50%;
     transform: translate(-50%,50%);
-    background-image: url(./img/star-default.svg);
     z-index: 11;
 }
 
-.products-list-item__active > .product-like-this{
+.product-like-this.product-like-this__active{
     background: #FEE200;
 }
-.products-list-item__active > .product-like-this::before {
+.product-like-this.product-like-this__active::before {
     z-index: 13;
-    background-image: url(./img/star-active.svg);
+    color: #12B6ED;
 }
 
 .product-like-this:hover {
     background: #FEE200;
 }
-.product-like-this:hover::before {
-    background-image: url(./img/star-active.svg);
-}
+
 @media screen and (min-width: 700px) {
     .products-header {
         padding-top: 100px;
@@ -222,6 +212,7 @@ ol,ul ,li{
         text-transform: uppercase;
         font-size: 27px;   
         margin: 0;
+        padding: 0 40px;
         
     }
     .products-title-list:before ,
@@ -243,7 +234,4 @@ ol,ul ,li{
     .products-link-search-two {
         display: none;
     }
-}
-@media screen and (min-width: 759px) {
-
 }

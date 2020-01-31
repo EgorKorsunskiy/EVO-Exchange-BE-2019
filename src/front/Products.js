@@ -1,18 +1,22 @@
 const PRODUCT_LIST = document.getElementById('products-list');
+const LIKE_THIS    = document.querySelectorAll('.product-like-this');
 
 const randomSort = (item) => item.sort( () => Math.random() - 0.5 );
 
-console.log(PRODUCT_LIST)
-
+let ItemsListLength = 8 // 8 придел чоличества отображаемых элементов на страницэ. чтоб сделать динамческую длину привязать переменную к импуту
 class Products{
+
+
 
     render(data) {
         
+        
         let htmlCtalog = ''
         let i = 0;
+        let activeClss = '' 
 
+        
         randomSort(data)
-        console.log(data)
 
         data.forEach( (elem )=> {
             let product = elem.product,
@@ -22,27 +26,40 @@ class Products{
                 id      = elem.id;
                 i++
 
-                if(i < 9 ){
+                if(localStorage.getItem(`products:${id}`)){
+                    ;
+                    activeClss = ' product-like-this__active'
+                }else {
+                    activeClss = '';
+                }
+
+                if(i <= ItemsListLength ){
                     //   products-list-item__active
                     htmlCtalog += `
                     <li class="products-list-item ">
-                        <span class="product-like-this"></span>
+                        <span class="product-like-this icon-star ${activeClss}" data-id-item="${id}"
+                        ></span>
 
                         <div class="products-list-item__img-box">
                             <img src="img/cards/${img}" alt="image" class="products-list-item__img">
                         </div>
                     
                         <div class="products-list-item__title">${title}</div>
-                        <span class="products-list-item__location">${locl}</span>
+                        <span class="products-list-item__location icon-Facebook-Places">${locl}</span>
                         <a href=" " class="products-list-item__watch" data-id=${id}>смотреть</a> 
-                     </li>      
+                        </li>      
                     `
-                    console.log(locl)
                 }
+
+                
+                
+                
         });
 
         PRODUCT_LIST.innerHTML = `${htmlCtalog}`
+        
     }
+    
 }
  
 const productsPage = new Products();
@@ -56,3 +73,7 @@ function getData(){
 }
 
 getData()
+
+
+PRODUCT_LIST.addEventListener('click' , localStorageProducts)
+

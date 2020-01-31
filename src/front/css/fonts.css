@@ -1,0 +1,127 @@
+@font-face {
+    font-family: 'proxima_novaregular';
+    src: url('./fonts/proximanova-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'proxima_novablack';
+    src: url('./fonts/proximanova-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'proxima_novasemibold';
+    src: url('./fonts/proximanova-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*----------------------icon fonts-------------------------------------------------------*/
+@font-face {
+  font-family: 'icomoon';
+  src:  
+    url("./fonts/icomoon.woff?8b4o61") format('woff'),
+    url("./fonts/icomoon.svg?8b4o61#icomoon") format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-logout-1 .path1:before {
+  content: "\e900";
+  color: rgb(0, 0, 0);
+}
+.icon-logout-1 .path2:before {
+  content: "\e901";
+  margin-left: -1em;
+  color: rgb(17, 17, 17);
+}
+.icon-Facebook-Places:before {
+  content: "\e902";
+  color: #DADADA;
+}
+.icon-Path-Copy-4:before {
+  content: "\e903";
+  color: blue;
+  font-size: 100px;
+}
+.icon-Search-1:before {
+  content: "\e904";
+  color: #fff;
+
+}
+.icon-Vector-1:before {
+  content: "\e905";
+}
+.icon-Vector-2:before {
+  content: "\e906";
+  color: red;
+}
+.icon-star:before {
+  content: "\e907";
+  color: #12b6ed;
+}
+.icon-burger:before {
+  content: "\e908";
+  color: #12b6ed;
+}
+.icon-check2:before {
+  content: "\e909";
+  color: #43b05c;
+}
+.icon-user2:before {
+  content: "\e90a";
+}
+.icon-star2:before {
+  content: "\e90b";
+}
+.icon-settings:before {
+  content: "\e90c";
+}
+.icon-user:before {
+  content: "\e90d";
+  color: #ccc;
+}
+.icon-home:before {
+  content: "\e90e";
+  color: #fff;
+}
+.icon-rect:before {
+  content: "\e90f";
+}
+.icon-check .path1:before {
+  content: "\e910";
+  color: rgb(0, 0, 0);
+  opacity: 0.0100;
+}
+.icon-check .path2:before {
+  content: "\e911";
+  margin-left: -1.375em;
+  color: rgb(255, 255, 255);
+}
+.icon-heart:before {
+  content: "\e912";
+  color: #f00;
+}
+.icon-circle:before {
+  content: "\e913";
+  color: #12b6ed;
+}
+
