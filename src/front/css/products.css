@@ -114,11 +114,12 @@
 .products-list-item__title {
     font-size: 16px;
     line-height: 19px;
-    padding: 10px 35px;
-    max-height: 62px;
+    padding: 0px 35px;
+    max-height: 59px;
     text-overflow: ellipsis;
     overflow: hidden;
     margin-bottom: auto;
+    margin-top: 10px;
 }
 
 
@@ -131,7 +132,7 @@
     line-height: 24px;
     transition: all 0.2s;
     max-width: max-content;
-    margin: 0 auto;
+    margin: 10px auto 0 auto;
 }
 .products-list-item__location:active {
     color: #00C0FF;
@@ -156,7 +157,7 @@
     border-radius: 50px;
     text-decoration: none;
     text-transform: uppercase;
-    margin: 20px;
+    margin: 10px 20px 20px 20px;
     transition: all 0.2s;
 }
 
