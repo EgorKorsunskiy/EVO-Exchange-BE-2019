@@ -25,7 +25,7 @@ class Products{
                 if(i < 9 ){
                     //   products-list-item__active
                     htmlCtalog += `
-                    <div class="products-list-item ">
+                    <li class="products-list-item ">
                         <span class="product-like-this"></span>
 
                         <div class="products-list-item__img-box">
@@ -33,9 +33,9 @@ class Products{
                         </div>
                     
                         <div class="products-list-item__title">${title}</div>
-                        <div class="products-list-item__location">${locl}</div>
+                        <span class="products-list-item__location">${locl}</span>
                         <a href=" " class="products-list-item__watch" data-id=${id}>смотреть</a> 
-                     </div>      
+                     </li>      
                     `
                     console.log(locl)
                 }

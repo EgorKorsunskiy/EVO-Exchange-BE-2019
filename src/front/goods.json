@@ -149,7 +149,7 @@
     },
     {
         "dealType": "EXCHANGE",
-        "description": "набор игрушек",
+        "description": "набор игрушек для вас и ваших детей, всё супер дупер высший класс",
         "id": "5",
         "isFavourite": true,
         "location": {
@@ -165,7 +165,7 @@
             {
             "defaultPhoto": true,
             "id": "5",
-            "resourceUrl": "lot3.jpg"
+            "resourceUrl": "lot13.jpg"
             }
         ],
         "season": "string",
