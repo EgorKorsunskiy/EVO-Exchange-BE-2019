@@ -10,7 +10,7 @@
 
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
+  font-family: 'icomoon';
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -57,6 +57,7 @@
   content: "\e907";
   color:#fff;
   font-size: 27px;
+  text-shadow: 0px 0px 10px rgba(31, 30, 30, 0.1);
 }
 .icon-burger:before {
   content: "\e908";

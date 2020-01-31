@@ -3,7 +3,7 @@ const LIKE_THIS    = document.querySelectorAll('.product-like-this');
 
 const randomSort = (item) => item.sort( () => Math.random() - 0.5 );
 
-let ItemsListLength = 8 // 8 придел чоличества отображаемых элементов на страницэ. чтоб сделать динамческую длину привязать переменную к импуту
+let ItemsListLength = 8 // 8 придел количества отображаемых элементов на странице
 class Products{
 
 
@@ -33,7 +33,7 @@ class Products{
                     activeClss = '';
                 }
 
-                if(i <= ItemsListLength ){
+                if(i <= +ItemsListLength ){
                     //   products-list-item__active
                     htmlCtalog += `
                     <li class="products-list-item ">
@@ -45,7 +45,8 @@ class Products{
                         </div>
                     
                         <div class="products-list-item__title">${title}</div>
-                        <span class="products-list-item__location icon-Facebook-Places">${locl}</span>
+                        <span class="products-list-item__location ">
+                        <span class="icon-Facebook-Places"> </span>${locl}</span>
                         <a href=" " class="products-list-item__watch" data-id=${id}>смотреть</a> 
                         </li>      
                     `
@@ -67,7 +68,7 @@ const productsPage = new Products();
 // productsPage.render();
 
 function getData(){
-    fetch('goods.json')
+    fetch('js/goods.json')
     .then(response => response.json())
     .then(productsPage.render)
 }
