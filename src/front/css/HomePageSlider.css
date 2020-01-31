@@ -4,48 +4,84 @@
 }
 
 .Home-page-slider {
-
+    display: block;
+    position: relative;
+    justify-content: space-between;
+    
+    /* overflow: hidden; */
+    width: 100%;
+    height: 250px;
 }       
-
-.Home-page-slider__element {
-
+.Home-page-slider__line{
+    /* overflow: hidden; */
+    float: left;    
+    height: 250px;
+    transition: all ease 1s;
 }
 
-.Home-page-slider__element-subTitle {
+.Home-page-slider__element {
+    width: 290px;
+    height: 250px;
+    border-radius: 21px;
+    background: #E5E5E5  no-repeat ;
+    background-size: cover;
+    color: #fff;
+    display: block;
+    float: left;
+    
+   
+}
 
+.Home-page-slider__element-long {
+    width: 600px;
+    max-width: 100%;
+}
+
+.Home-page-slider__element-text-box {
+    position: absolute;
+}
+.Home-page-slider__element-subTitle {
+    font-weight: 300;
+    display: block;
+    font-size: 18px;
+    line-height: 24px;
 }
 
 .Home-page-slider__element-title{
-
+    font-weight: 700;
+    display: block;
+    font-size: 36px;
+    line-height: 44px;
+    text-transform: uppercase;
 }
 
 
 
 
 .Home-page-slider__element-toy{     /*Toy*/
-
+    background-image: url("../img/slider/toy.jpg");
 }
 
 .Home-page-slider__element-clothes{ /*clothes*/
-
+    background-image: url("../img/slider/clothes.jpg")
 }
 
 .Home-page-slider__element-child{    /*child*/
-
+    background-image: url("../img/slider/child.jpg")
 }
 
 .Home-page-slider__element-furniture{/*furniture*/
-
+    background-image: url("../img/slider/furniture.jpg")
 }
 
 .Home-page-slider__element-shoes{   /*shoes*/
-
+    background-image: url("../img/slider/shoes.jpg");
 }
 
 .Home-page-slider__element-strollers{/*strollers*/
-
+    background-image: url("../img/slider/strollers.jpg");
 }
 
 .Home-page-slider__element-books{/*books*/
-
+    background-image: url("../img/slider/books.jpg");
 }
