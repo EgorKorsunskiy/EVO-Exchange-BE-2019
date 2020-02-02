@@ -1,7 +1,3 @@
-:root {
-    --short--width: 290px;
-    --short--width: 600px;
-}
 
 .Home-page-slider {
     display: block;
@@ -13,6 +9,7 @@
     width: 100%;
     height: 250px;
     transition: all 1s;
+    margin-bottom: 50px;
 }       
 .Home-page-slider__line{
     /* overflow: hidden; */
@@ -29,7 +26,7 @@
     position: relative;
     width: 290px;
     height: 250px;
-    border-radius: 21px;
+    border-radius: 20px;
     background: #E5E5E5  no-repeat ;
     background-size: cover;
     color: #fff;
@@ -107,7 +104,11 @@
     background-image: url("../img/slider/books.jpg");
 }
 
-@media screen and (min-width: 637px) {
+@media screen and (min-width: 700px) {
+    .Home-page-slider {
+        margin-bottom: 125px;
+    }
+
     .Home-page-slider__element-subTitle {
         white-space: nowrap;
     }
