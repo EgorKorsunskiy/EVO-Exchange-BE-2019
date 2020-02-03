@@ -39,3 +39,7 @@ function HomeSliderMove() {
    
 }
 HomeSliderMove()
+
+setInterval(HomeSliderMove , 5000)
+
+

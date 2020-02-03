@@ -178,7 +178,7 @@
     border-radius: 0 0 50% 50%;
     transition: all 0.2s;
 
-    box-shadow: 1px 1px 10px rgba(31, 30, 30, 0.1);
+    /* box-shadow: 1px 1px 10px rgba(31, 30, 30, 0.1); */
 }
 .product-like-this::before {
     position: absolute;

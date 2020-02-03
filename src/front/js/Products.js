@@ -8,13 +8,14 @@ class Products{
 
 
     handleSetLocationStorage (el, id){
-        const { pushProducts, products } = localStorageUtil.putProducts(id)
+        const { pushProducts,products } = localStorageUtil.putProducts(id)
 
         if(pushProducts) {
             el.classList.add('product-like-this__active')
             
         }else {
-            el.classList.remove('product-like-this__active')  
+            el.classList.remove('product-like-this__active')
+            
         }
     }
 
