@@ -1,19 +1,37 @@
-let arr = []
 
 
-function localStorageProducts(event){
-    const target = event.target
-    const targetID = event.target.dataset.idItem;
-
-    if( !localStorage.getItem(`products:${targetID}`) &&
-        targetID !== undefined ) {
-        localStorage.setItem(`products:${targetID}` , `${targetID}`)
-
-        target.classList.add('product-like-this__active')
-    }else {
-        localStorage.removeItem(`products:${targetID}`)
-        target.classList.remove('product-like-this__active')  
+class LocalStorageUtil {
+    constructor(){
+        this.keyName = 'products';
     }
-  
-    
+
+
+    getProducts(){
+        const productsLocalStorag = localStorage.getItem(this.keyName);
+        if (productsLocalStorag !== null) {
+            return JSON.parse(productsLocalStorag);
+        }
+        return [];
+    }
+
+    putProducts(id){
+        let products = this.getProducts();
+        let pushProducts = false;
+        const index = products.indexOf(id);
+
+        if(index === -1) {
+            products.push(id);
+            pushProducts = true
+        }else {
+            products.splice(index, 1)
+        }
+     
+        localStorage.setItem(this.keyName, JSON.stringify(products))
+
+        return { pushProducts,products }
+    }
 }
+
+const localStorageUtil = new LocalStorageUtil();
+
+
