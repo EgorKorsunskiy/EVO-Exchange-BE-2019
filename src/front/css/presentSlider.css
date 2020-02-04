@@ -58,7 +58,7 @@
 
 
 
-@media screen and (min-width: 700px) { 
+@media screen and (min-width:812px) { 
     .present-section {
         background:  url(../img/clouds/bgheader.png);
         background-position: bottom;
@@ -89,5 +89,13 @@
     }
     .presentSlider-btn{
         display: none;
+    }
+}
+
+@media screen and (max-height: 500px) {
+    .presentSlider-element {
+        padding-top: 100px;
+        flex-direction: row;
+        justify-content: center;
     }
 }

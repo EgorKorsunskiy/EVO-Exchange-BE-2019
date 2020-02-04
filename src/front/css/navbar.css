@@ -27,7 +27,7 @@
     width: 70px;
     height: 26px;
     background-size: contain;
-    background: url('/img/Logo-small.png');
+    background: url('../img/Logo-small.png');
 }
 
 .navbarBurger-btn-click {
@@ -182,7 +182,7 @@
         min-width: 148px;
         width: 148px;
         height: 56px;
-        background: url('/img/logo.png');
+        background: url('../img/logo.png');
     }
     .navbar-top-inner {
         display: block;

@@ -104,7 +104,7 @@
     background-image: url("../img/slider/books.jpg");
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 820px) {
     .Home-page-slider {
         margin-bottom: 125px;
     }
