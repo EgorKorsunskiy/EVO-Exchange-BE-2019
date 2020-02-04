@@ -27,7 +27,13 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.iconquestion {
+  background-image: url(../fonts/Group.png);
+}
 
+.iconHome {
+  background-image: url(../fonts/home.png);
+}
 .icon-logout-1 .path1:before {
   content: "\e900";
   color: rgb(0, 0, 0);
@@ -57,6 +63,7 @@
 .icon-Vector-2:before {
   content: "\e906";
   color: white;
+  font-size: 25px;
 }
 .icon-star:before {
   content: "\e907";

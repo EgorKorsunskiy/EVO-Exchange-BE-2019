@@ -1,5 +1,5 @@
 const personalArea = document.getElementById('personalArea')
-
+const navbar       = document.querySelector('.navbar')
 
 
 function CreatPersonalArea(url) {
@@ -28,5 +28,6 @@ function CreatPersonalArea(url) {
 function LikeClick(){
     document.querySelector('.personalAreaCounter').innerHTML = `${JSON.parse(localStorage.getItem('products')).length}`
 }
+
 
 

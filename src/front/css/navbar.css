@@ -303,3 +303,8 @@
         background-color: #00A526;
     }
 }
+@media (max-height: 500px) {
+    .out {
+        transform: translateY(-100%);
+    }
+}

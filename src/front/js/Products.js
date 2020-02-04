@@ -3,7 +3,9 @@ const LIKE_THIS    = document.querySelectorAll('.product-like-this');
 
 const randomSort = (item) => item.sort( () => Math.random() - 0.5 );
 
-let ItemsListLength = 8 // 8 придел количества отображаемых элементов на странице
+let ItemsListLength = 8; // 8 придел количества отображаемых элементов на странице
+
+
 class Products{
 
 
@@ -83,12 +85,13 @@ const productsPage = new Products();
 // productsPage.render();
 
 function getData(){
-    fetch('js/goods.json')
+    fetch('./js/goods.JSON')
     .then(response => response.json())
     .then(data => productsPage.render(randomSort(data)))
 }
 
 getData()
+
 
 
 

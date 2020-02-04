@@ -1,5 +1,6 @@
 .HelpChildren{
     display: none;
+    margin-bottom: 50px;
 }
 @media screen and (min-width: 700px) {
     .HelpChildren{

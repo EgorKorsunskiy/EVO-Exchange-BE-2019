@@ -1,6 +1,7 @@
 .present-section {
     background:  url(../img/clouds/bgheader.png);
     background-position: bottom;
+    background-size: cover;
     height: 100vh;
     color: #fff;
     position: relative;
@@ -92,7 +93,7 @@
     }
 }
 
-@media screen and (max-height: 500px) {
+@media (max-height: 500px) {
     .presentSlider-element {
         padding-top: 100px;
         flex-direction: row;

@@ -19,6 +19,24 @@ function presentSlider(n) {
     }else if (current < presentSliderElements.length){
         presentSliderElements[current].classList.remove('opasity')
     }
-   
+
 }
 presentSlider(0)
+
+
+function presentSliderAutoMove (){
+    
+    
+
+    for(let i = 0; i < 3; i++) {
+        let n = 1
+        if(i%2 != 0){
+            n = -1
+        }
+
+        setInterval(() => {
+            presentSlider(n)
+        }, 3000);
+    }
+}
+presentSliderAutoMove()
