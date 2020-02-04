@@ -2,7 +2,7 @@
 .wrapper {
     width: 100%;
     max-width: 1251px;
-    padding: 15px;
+    padding: 0 15px;
     margin: 0 auto;
 }
 .products-section{
@@ -199,12 +199,13 @@
 }
 
 .product-like-this:hover {
+    cursor: pointer;
     background: #FEE200;
 }
 
 @media screen and (min-width: 700px) {
     .products-header {
-        padding-top: 100px;
+        padding-top: 90px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -228,7 +229,6 @@
         background-color: #11B5ED;
         top: 50%;
         transform: translate(0 , -50%);
-        
     }
 
     .products-link-search-one {

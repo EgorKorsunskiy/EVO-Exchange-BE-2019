@@ -14,7 +14,7 @@
         color: #00C0FF;
         font-size: 43px;
         text-transform: uppercase;
-        font-weight: 700;
+        font-family: 'PollywogCry';
         padding-bottom: 30px;
     }
     
@@ -43,6 +43,9 @@
         background-color: #00c0ff;
         padding: 15px 40px;
         border-radius: 20px;
+        transition: 0.2s;
     }
-    
+    .HelpChildren__btn:hover {
+    background-color:#0094FF
+    }
 }

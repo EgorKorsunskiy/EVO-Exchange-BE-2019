@@ -1,4 +1,9 @@
 @font-face {
+  font-family: 'PollywogCry';
+  src: url('./PollywogCyr.ttf');
+}
+
+@font-face {
   font-family: 'icomoon';
   src:  
     url('icomoon.woff?8b4o61') format('woff'),
@@ -51,7 +56,7 @@
 }
 .icon-Vector-2:before {
   content: "\e906";
-  color: red;
+  color: white;
 }
 .icon-star:before {
   content: "\e907";

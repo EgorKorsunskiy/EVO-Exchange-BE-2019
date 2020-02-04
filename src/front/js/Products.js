@@ -17,6 +17,7 @@ class Products{
             el.classList.remove('product-like-this__active')
             
         }
+        LikeClick()
     }
 
     
@@ -25,8 +26,11 @@ class Products{
         const productsStore = localStorageUtil.getProducts();
         let htmlCtalog = ''
         let i = 0;
-
+        let avatar = ''
+        CreatPersonalArea(avatar)
+        
         data.forEach( (elem )=> {
+            
             let activeClass = '' ;
 
             let product = elem.product,
