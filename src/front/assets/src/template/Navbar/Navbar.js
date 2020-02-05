@@ -3,9 +3,13 @@ const navbar       = document.querySelector('.navbar')
 
 
 function CreatPersonalArea(url) {
-    let count = JSON.parse(localStorage.getItem('products')).length
-   
-    if(url === '' ) {   
+    let count = 0;
+
+    if(JSON.parse(localStorage.getItem('products')) ) {
+        count = JSON.parse(localStorage.getItem('products')).length
+    }
+
+    if(url === '' ) {
         personalArea.innerHTML = `
         <a href='#' class="personalArea ">
             <div class='userPhoto-default icon-user2'></div>

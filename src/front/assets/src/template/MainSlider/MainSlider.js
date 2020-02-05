@@ -23,11 +23,11 @@ function HomeSliderMove() {
         HSoffset = HSoffset + Number(HSwidthArray[HSstep]);
         let offsets = Number(HSoffset)
         HSline.style.left = Number(- offsets)+'px' ;
-        
+
     }else {
         HSline.style.left = -(HSlineWidth - HSsliderWidth) + 'px'
         HSoffset  = 0;
-        HSstep = -1; 
+        HSstep = -1;
     }
 
     if (HSstep + 1  === HSelements.length) {
@@ -36,7 +36,7 @@ function HomeSliderMove() {
     }else {
         HSstep++
     }
-   
+
 }
 HomeSliderMove()
 

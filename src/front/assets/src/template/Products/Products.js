@@ -14,15 +14,15 @@ class Products{
 
         if(pushProducts) {
             el.classList.add('product-like-this__active')
-            
+
         }else {
             el.classList.remove('product-like-this__active')
-            
+
         }
         LikeClick()
     }
 
-    
+
 
     render(data) {
         const productsStore = localStorageUtil.getProducts();
@@ -30,9 +30,9 @@ class Products{
         let i = 0;
         let avatar = ''
         CreatPersonalArea(avatar)
-        
+
         data.forEach( (elem )=> {
-            
+
             let activeClass = '' ;
 
             let product = elem.product,
@@ -40,17 +40,17 @@ class Products{
                 img     = product.images[0].resourceUrl,
                 locl    = elem.location.city,
                 id      = elem.id;
-                i++
+            i++
 
-                if(productsStore.indexOf(id) === -1){
-                    activeClass = ''
-                }else {    
-                    activeClass = ' product-like-this__active';
-                }
+            if(productsStore.indexOf(id) === -1){
+                activeClass = ''
+            }else {
+                activeClass = ' product-like-this__active';
+            }
 
-                if(i <= +ItemsListLength ){
-                    //   products-list-item__active
-                    htmlCtalog += `
+            if(i <= +ItemsListLength ){
+                //   products-list-item__active
+                htmlCtalog += `
                     <li class="products-list-item ">
                         <span class="product-like-this icon-star ${activeClass}" 
                                 data-id-item="${id}"
@@ -67,27 +67,27 @@ class Products{
                         <a href=" " class="products-list-item__watch" data-id=${id}>смотреть</a> 
                         </li>      
                     `
-                }
+            }
 
-                
-                
-                
+
+
+
         });
 
         PRODUCT_LIST.innerHTML = `${htmlCtalog}`
-        
+
     }
-    
+
 }
- 
+
 const productsPage = new Products();
 
 // productsPage.render();
 
 function getData(){
-    fetch('./js/goods.JSON')
-    .then(response => response.json())
-    .then(data => productsPage.render(randomSort(data)))
+    fetch('./goods.JSON')
+        .then(response => response.json())
+        .then(data => productsPage.render(randomSort(data)))
 }
 
 getData()
