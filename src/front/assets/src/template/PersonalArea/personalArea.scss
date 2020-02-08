@@ -1,0 +1,264 @@
+.PersonalArea {
+    margin-top: 150px;
+    position: relative;
+    display: flex;
+    width: 100%;
+}
+
+#cabinet-list {
+    width: 30%;
+    color: #fff;
+    padding-bottom: 30px;
+    margin-bottom: -30px;
+}
+
+#cabinet-products {
+    width: 950px;
+    max-width: 100%;
+    position: relative;
+    z-index: 1;
+    padding: 45px 15px 45px 45px;
+}
+
+
+.usserBlock{
+    background-color: #00C0FF;
+    padding: 20px 0;
+   
+
+    display: flex;
+    justify-content: flex-end;
+
+
+    &__ienner { 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 210px;
+        height: 210px;
+    }
+
+    &__avatar {
+        display: block;
+        border-radius: 50%;
+        width: 114px;
+        height: 114px;
+    }  
+
+    &__name {
+        margin-top: 12px;
+        display: block;
+        font-size: 14px;
+        line-height: 16px;  
+    }
+
+    &__location {
+        margin-top: 5px;
+        display: block;
+        font-size: 12px;
+        line-height: 16px;
+    }
+}
+
+.cabinet-list {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;  
+
+    padding-bottom: 100px;
+    margin-bottom: -100px;
+    z-index: 0;
+
+    &__box {
+        
+        color: #111;
+    }
+
+    &__item {
+        position: relative;
+        padding: 10px;
+        transition: all 0.2s;
+        
+        &:hover > .cabinet-list__link , &:hover > span {
+
+            color: #12B6ED;
+        }        
+    }
+
+    &__link {
+        color: #111;
+        font-size: 14px;
+        display: block;
+        padding:10px ;
+        text-decoration: none;
+    }
+
+    &__link-active {
+        position: relative;
+        color: #12B6ED;
+
+        &:before {
+            position: absolute;
+            content: '';
+            right: 0;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background-color: #00C0FF;
+        }
+    }
+
+
+    span {
+        position: absolute;
+        top: 50%;
+        left: -15px;
+        transform: translate(0 , -50%);
+    }
+
+}
+
+
+
+.myCabinetOut{
+
+    fieldset {
+        width: 600px;
+        max-width: 100%;
+    }
+
+
+    &__title {
+        position: relative;
+        color: #11B5ED;
+        text-transform: uppercase;
+        font-family: 'PollywogCry';
+        font-size: 27px;
+        line-height: 24px;      
+        display: inline-block;
+        padding:30px;
+
+        &::before , &::after {
+            position: absolute;
+            content: '';
+            width: 10px;
+            height: 10px;
+            background-color: #12B6ED;
+            border-radius: 50%;
+            top: 50%;
+            transform: translate(0, -50%);
+            
+        }
+        &::before {
+            left: 0px;
+        }
+        &::after {
+            right: 0px;
+        }
+    }//title
+
+    
+
+    &__box-input {
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    &__label {
+        display: inline-block;
+        width: 100px;
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    &__input {
+        width: 100%;
+
+        background: #FFFFFF;
+        border: 1px solid #E9E9E9;
+        border-radius: 2px;
+
+        font-size: 16px;
+        line-height: 16px;
+        padding:10px 15px ;
+
+        &:hover , &:active , &:focus{
+            border: 1px solid #CFCFCF;
+            outline: none;
+        }
+    }
+
+    &__btnAddChild {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-top: 20px;
+        
+
+
+        button {
+            margin-left: 20px;
+            display: block;
+            width: 35px;
+            height: 35px;
+            position: relative;
+            background-color: #3CC732;
+            border-radius: 50%;
+            border: none;
+            transition: all 0.2s;
+
+
+            &:hover {
+                background-color:#00A526;
+            }
+
+            &::after , &:before {
+                content: '';
+                display: block;
+                width: 12px;
+                height: 2px;
+                background-color: #fff;
+                position: absolute;
+                
+                left: 12px;
+                top: 49%;
+            }
+            &:before {
+                transform: rotate(90deg);
+            }
+
+
+            &:focus{
+                outline: none;
+                border: none;
+            }
+
+            
+        }//button
+
+    }//__btnAddChild
+
+    &__btnSave {
+        display: block;
+        margin-top: 50px;
+        text-transform: uppercase;
+        font-size: 16px;
+        padding: 15px 80px;
+        max-width: 100%;
+        background: #12B6ED;
+        border:none;
+        border-radius: 25px;
+        color: #fff;
+
+        transition: all 0.2s;
+        
+        &:hover {
+            background:#0094FF;
+        }
+    }
+
+}//myCabinetOut

@@ -4,21 +4,24 @@ let current = 0;
 
 function presentSlider(n) {
 
-    presentSliderElements[current].classList.add('opasity')
+    if(presentSliderElements.length != 0) {
+        presentSliderElements[current].classList.add('opasity')
 
-    current = n + current;
+        current = n + current;
 
 
-    if(current >= presentSliderElements.length){
-        current = 0
+        if(current >= presentSliderElements.length){
+            current = 0
+        }
+
+        if(current < 0) {
+            current = presentSliderElements.length - 1
+            presentSliderElements[current].classList.remove('opasity')
+        }else if (current < presentSliderElements.length){
+            presentSliderElements[current].classList.remove('opasity')
+        }   
     }
 
-    if(current < 0) {
-        current = presentSliderElements.length - 1
-        presentSliderElements[current].classList.remove('opasity')
-    }else if (current < presentSliderElements.length){
-        presentSliderElements[current].classList.remove('opasity')
-    }
 
 }
 presentSlider(0)
@@ -38,5 +41,8 @@ function presentSliderAutoMove (){
             presentSlider(n)
         }, 3000);
     }
+
 }
 presentSliderAutoMove()
+
+

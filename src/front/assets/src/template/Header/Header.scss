@@ -9,57 +9,75 @@
 .presentSlider {
   height: 100vh;
   position: relative;
-}
-.presentSlider-element {
-  padding: 20px;
-  width: 100%;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  transition:all 0.4s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+  z-index: 4;
+  padding-top: 100px;
 
-.presentSlider-element__text {
-  padding:20px 10px;
-  max-width: 292px;
-  text-align: center;
-  font-size: 22px;
-  line-height:  1.6;
 
-}
-.presentSlider-element__img {
-  display: block;
-  max-height: 110px;
-  object-fit: cover;
-}
-.presentSlider-btn{
-  position: absolute;
-  top: 50%;
-  transform: translate(0%, -40%);
-  display: block;
-  width: 40%;
-  height: 50vh;
-  z-index: 100;
-  cursor: pointer;
-}
-.presentSlider-btn__left {
-  left: 10px;
-}
-.presentSlider-btn__right {
-  right:10px;
-}
+  &-element {
+    padding: 20px;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    transition:all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 5;
+
+
+    &__text {
+      padding:20px 10px;
+      max-width: 292px;
+      text-align: center;
+      font-size: 22px;
+      line-height:  1.6;
+    
+    }
+
+    &__img {
+      display: block;
+      max-height: 110px;
+      object-fit: cover;
+    }
+
+
+  }//element
+
+  &-btn{
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -40%);
+    display: block;
+    width: 40%;
+    height: 50vh;
+    z-index: 100;
+    cursor: pointer;
+    z-index: 50;
+
+    &__left {
+      left: 10px;
+    }
+    &__right {
+      right:10px;
+    }
+    
+  }
+
+  
+}//presentSlider
+
 .opasity  {
   opacity: 0;
 }
 
-
-
-
-@media screen and (min-width:812px) {
+@media screen and (min-height: 375px) and (min-width:370px){
+  .presentSlider-element__img {
+  max-height: 100%;
+  }
+}
+@media screen and (min-width:812px) and (min-height: 700px) {
   .present-section {
     background:  url(../img/clouds/bgheader.png);
     background-position: bottom;
@@ -70,32 +88,164 @@
     justify-content: space-between;
     align-items: center;
     color: #fff;
-  }
-  .presentSlider-element {
-    position: relative;
-    opacity: 1;
-    width: fit-content;
+  
+    &-element {
+      position: relative;
+      opacity: 1;
+      width: fit-content;
+      left: 0;
+      top: 0;
+      transform: translate(0, 0);
+    
+
+      &__img {
+        max-height: 100%;
+        max-width: 100%;
+        margin-bottom: 30px;
+      }
+      &__text {
+        font-size: 22px;
+        text-shadow: 0px 0px 5px rgba(0,0,0, 0.2);
+      }
+    }//element
+
+    &-btn{
+      display: none;
+    } 
+    
+  }//presentSlider
+  /*
+--------------------------------------------------------------------------------
+-----------------------------------------------------------------------Clouds---
+--------------------------------------------------------------------------------
+*/
+  .cloudsInner {
+    position: absolute;
+    height: 90vh;
+    bottom: 0;
     left: 0;
     top: 0;
-    transform: translate(0, 0);
+    right: 0;
+    margin: auto;
+    display: block;
+    width: 100%;
+    z-index: 1;
+    overflow: hidden;
+
+    span {
+      position: absolute;
+      display: block;
+    }
   }
 
-  .presentSlider-element__img {
-    max-height: 100%;
-    max-width: 100%;
-    margin-bottom: 30px;
-  }
-  .presentSlider-element__text {
-    font-size: 22px;
-  }
-  .presentSlider-btn{
-    display: none;
+
+
+  .cloud {
+
+    &One {
+      background-image: url(../../img/clouds/Cloud1.png);
+      width: 112px;
+      height: 79px;
+      top: 17%;
+      background-size: cover;
+      -webkit-animation-name: moveRight;
+      -webkit-animation-duration: 40s;
+      -webkit-animation-timing-function: linear;
+      -webkit-animation-iteration-count: infinite;
+    }
+    &Two {
+      background-image: url(../../img/clouds/Cloud2.png);
+      width: 126px;
+      height: 79px;
+      top:25%;
+      right: 50%;
+      background-size: cover;
+      transition: all 0.1s;
+      -webkit-animation-name: moveRight;
+      -webkit-animation-duration: 23s;
+      -webkit-animation-timing-function: linear;
+      -webkit-animation-iteration-count: infinite;
+    }
+    &Three {
+      background-image: url(../../img/clouds/Cloud1.png);
+      width: 224px;
+      height: 158px;
+      bottom: 1%;
+      right: 1px;
+      background-size: cover;
+      -webkit-animation-name: moveRight;
+      -webkit-animation-duration: 25s;
+      -webkit-animation-timing-function: linear;
+      -webkit-animation-iteration-count: infinite;
+    }
+    &Four {
+      background-image: url(../../img/clouds/Cloud2.png);
+      width: 126px;
+      height: 79px;
+      top:50%;
+      right: 10;
+      background-size: cover;
+      -webkit-animation-name: moveRight;
+      -webkit-animation-duration: 50s;
+      -webkit-animation-timing-function: linear;
+      -webkit-animation-iteration-count: infinite;
+    }
+    &Five {
+      background-image: url(../../img/clouds/Cloud2.png);
+      width: 256px;
+      height: 162px;
+      top: 35%;
+      right: 10;
+      background-size: cover;
+      -webkit-animation-name: moveRight;
+      -webkit-animation-duration: 60s;
+      -webkit-animation-timing-function: linear;
+      -webkit-animation-iteration-count: infinite;
+    }
+  
+    @keyframes moveRight {
+      0% { right: -224px;}
+      
+      100% {right: calc(100%)}
+    }
+        &six {
+        background-image: url(../../img/clouds/Cloud2.png);
+        width: 126px;
+        height: 79px;
+        top:25%;
+        right: 50%;
+        background-size: cover;
+        -webkit-animation-name: moveRight2;
+        -webkit-animation-duration: 60s;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
+      }
+    
+
+        &seven {
+        background-image: url(../../img/clouds/Cloud2.png);
+        width: 255px;
+        height: 158px;
+        bottom: 1%;
+        right: 1px;
+        background-size: cover;
+        -webkit-animation-name: moveRight2;
+        -webkit-animation-duration: 60s;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
+      }
+    
+    @keyframes moveRight2 {
+      0% { right: -524px;}
+      
+      100% {right: calc(100%)}
+    }
   }
 }
 
 @media (max-height: 500px) {
   .presentSlider-element {
-    padding-top: 100px;
+    padding-top: 55px;
     flex-direction: row;
     justify-content: center;
   }

@@ -1,0 +1,6 @@
+file goods.json -  products information
+
+
+1_) npm install
+2_) gulp 
+3_) src/ goods.json to copy  /building paste

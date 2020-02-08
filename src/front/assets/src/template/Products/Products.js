@@ -23,61 +23,58 @@ class Products{
     }
 
 
-
     render(data) {
-        const productsStore = localStorageUtil.getProducts();
+        const productsStore = localStorageUtil.getProducts('products');
         let htmlCtalog = ''
         let i = 0;
-        let avatar = ''
-        CreatPersonalArea(avatar)
+        
+      
+    
+        if(PRODUCT_LIST!== null){
+            data.forEach( (elem )=> {
+                
+                let product = elem.product,
+                    title   = elem.description,
+                    img     = product.images[0].resourceUrl,
+                    locl    = elem.location.city,
+                    id      = elem.id;
+                i++
 
-        data.forEach( (elem )=> {
-
-            let activeClass = '' ;
-
-            let product = elem.product,
-                title   = elem.description,
-                img     = product.images[0].resourceUrl,
-                locl    = elem.location.city,
-                id      = elem.id;
-            i++
-
-            if(productsStore.indexOf(id) === -1){
-                activeClass = ''
-            }else {
-                activeClass = ' product-like-this__active';
-            }
-
-            if(i <= +ItemsListLength ){
-                //   products-list-item__active
-                htmlCtalog += `
-                    <li class="products-list-item ">
-                        <span class="product-like-this icon-star ${activeClass}" 
-                                data-id-item="${id}"
-                                onclick='productsPage.handleSetLocationStorage(this, "${id}")'>
-                                </span>
-
-                        <div class="products-list-item__img-box">
-                            <img src="img/cards/${img}" alt="image" class="products-list-item__img">
-                        </div>
-                    
-                        <div class="products-list-item__title">${title}</div>
-                        <span class="products-list-item__location ">
-                        <span class="icon-Facebook-Places"> </span>${locl}</span>
-                        <a href=" " class="products-list-item__watch" data-id=${id}>смотреть</a> 
+                let activeClass = '' ;
+    
+                if(productsStore.indexOf(id) === -1){
+                    activeClass = ''
+                }else {
+                    activeClass = ' product-like-this__active';
+                }
+    
+                if(i <= +ItemsListLength ){
+                    //   products-list-item__active
+                    htmlCtalog += `
+                        <li class="products-list-item ">
+                            <span class="product-like-this icon-star ${activeClass}" 
+                                    data-id-item="${id}"
+                                    onclick='productsPage.handleSetLocationStorage(this, "${id}")'>
+                            </span>
+    
+                            <div class="products-list-item__img-box">
+                                <img src="img/cards/${img}" alt="image" class="products-list-item__img">
+                            </div>
+                        
+                            <div class="products-list-item__title">${title}</div>
+                            <span class="products-list-item__location ">
+                            <span class="icon-Local"> </span>${locl}</span>
+                            <div class="products-list-item__bottom">
+                                <a href=" " class="products-list-item__watch" data-id=${id}>смотреть</a> 
+                            </div>
                         </li>      
                     `
-            }
-
-
-
-
-        });
-
-        PRODUCT_LIST.innerHTML = `${htmlCtalog}`
-
+                }
+            });
+            PRODUCT_LIST.innerHTML = `${htmlCtalog}`
+        }
+        // return  `${htmlCtalog}`
     }
-
 }
 
 const productsPage = new Products();
@@ -85,9 +82,9 @@ const productsPage = new Products();
 // productsPage.render();
 
 function getData(){
-    fetch('./goods.JSON')
-        .then(response => response.json())
-        .then(data => productsPage.render(randomSort(data)))
+    fetch('goods.JSON')
+    .then(response => response.json())
+    .then(data => productsPage.render(randomSort(data)))
 }
 
 getData()

@@ -1,12 +1,14 @@
 @import "reset";
 @import "variables";
+@import "style";
+
 @import "../template/Navbar/Navbar";
 @import "../template/Header/Header";
 @import "../template/Products/Products";
 @import "../template/ChildrenHelp/ChildrenHelp";
 @import "../template/MainSlider/MainSlider";
 @import "../template/Footer/Footer";
+@import "../template/PersonalArea/personalArea";
 
 
 
-@import "style";

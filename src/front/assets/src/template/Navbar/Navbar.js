@@ -2,7 +2,7 @@ const personalArea = document.getElementById('personalArea')
 const navbar       = document.querySelector('.navbar')
 
 
-function CreatPersonalArea(url) {
+function CreatPersonalArea(url = '') {
     let count = 0;
 
     if(JSON.parse(localStorage.getItem('products')) ) {
@@ -11,8 +11,8 @@ function CreatPersonalArea(url) {
 
     if(url === '' ) {
         personalArea.innerHTML = `
-        <a href='#' class="personalArea ">
-            <div class='userPhoto-default icon-user2'></div>
+        <a href='PersonalArea.html' class="personalArea ">
+            <div class='userPhoto-default icon-avatarDefault'></div>
             <span class='personalArea-text' >Мой кабинет</span>
             <div class='personalAreaCounter'>${count}</div>
         </a>
@@ -33,5 +33,5 @@ function LikeClick(){
     document.querySelector('.personalAreaCounter').innerHTML = `${JSON.parse(localStorage.getItem('products')).length}`
 }
 
-
+CreatPersonalArea()
 
